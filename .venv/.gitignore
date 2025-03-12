@@ -1,0 +1,90 @@
+# Entorno virtual de Python (venv)
+venv/
+.venv/
+env/
+.env/
+ENV/
+
+# Archivos de entorno
+.env
+.env.local
+.env.development
+.env.production
+.env.test
+.env.example
+
+# Django
+__pycache__/
+*.py[cod]
+*$py.class
+*.sqlite3
+*.log
+*.pot
+*.pyc
+db.sqlite3
+media/
+staticfiles/
+
+# Node.js / React
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+.DS_Store
+dist/
+build/
+.cache/
+.temp/
+.svelte-kit/
+.vite/
+*.log
+
+# IDE y editores
+.idea/
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Sistema operativo
+Thumbs.db
+.DS_Store
+
+# Docker
+docker-compose.override.yml
+docker-compose.yml
+.dockerignore
+
+# Archivos generados por el frontend (React)
+/public/
+/src/serviceWorker.js
+/src/setupTests.js
+/src/__tests__/
+/src/reportWebVitals.js
+
+# Archivos generados por el backend (Django)
+*.mo
+*.pot
+*.log
+*.sql
+*.sqlite3
+*.pyc
+*.pyo
+*.pyd
+*.db
+*.csv
+*.xlsx
+*.xls
+*.pdf
+*.zip
+*.tar.gz
+*.gz
+*.rar
+*.7z
+*.bak
+*.swp
+*.swo
+*.swn
