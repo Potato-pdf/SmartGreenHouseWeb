@@ -6,7 +6,7 @@ const HomeContainer = styled.div`
   padding-top: 2rem;
   width: 100%;
   min-height: 100vh;
-  background-color: #FFFFFF; /* Fondo blanco para los demás apartados */
+  background: transparent;
 `;
 
 export function HomePage() {

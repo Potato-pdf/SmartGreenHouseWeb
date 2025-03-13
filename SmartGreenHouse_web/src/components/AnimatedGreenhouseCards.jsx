@@ -72,6 +72,15 @@ const StyledWrapper = styled.div`
   #c4:hover { transform: translateX(50px) rotate(0deg) !important; }
 `;
 
+const Card = styled.div`
+  // ...existing styles...
+  cursor: pointer;
+  
+  &:hover {
+    transform: ${props => `translateX(${props.hoverX}px) rotate(0deg) !important`};
+  }
+`;
+
 export default function AnimatedGreenhouseCards() {
   const [greenhouses, setGreenhouses] = useState([]);
 
@@ -92,6 +101,13 @@ export default function AnimatedGreenhouseCards() {
   if (cardsData.length < 4)
     return <div style={{ color: "white", textAlign: "center" }}>Cargando tarjetas...</div>;
 
+  const handleCardClick = (id) => {
+    const element = document.getElementById(`greenhouse-${id}`);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <BackgroundWrapper>
       <StyledWrapper>
@@ -99,8 +115,15 @@ export default function AnimatedGreenhouseCards() {
           {cardsData.map((gh, index) => {
             const cardId = `c${index + 1}`;
             const imagen = gh.imagen.replace("http://localhost:8000/assets/", "");
+            const hoverX = [-150, -100, -50, 50][index];
+            
             return (
-              <div className="card" id={cardId} key={gh.id_invernadero}>
+              <div 
+                className="card" 
+                id={cardId} 
+                key={gh.id_invernadero}
+                onClick={() => handleCardClick(gh.id_invernadero)}
+              >
                 <img src={`./public/${imagen}`} alt={gh.nombre} />
                 <div className="info">
                   <strong>{gh.nombre}</strong>

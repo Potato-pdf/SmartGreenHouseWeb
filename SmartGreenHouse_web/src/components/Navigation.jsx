@@ -121,11 +121,16 @@ export function Navigation() {
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollY = window.pageYOffset;
-      if (currentScrollY - lastScrollY > 5) {
-        setHideHeader(true);
-      } else if (lastScrollY - currentScrollY > 5) {
-        setHideHeader(false);
+      
+      // Solo aplicar la animación cuando estemos cerca del top
+      if (currentScrollY < 200) {
+        if (currentScrollY - lastScrollY > 5) {
+          setHideHeader(true);
+        } else if (lastScrollY - currentScrollY > 5) {
+          setHideHeader(false);
+        }
       }
+      
       setLastScrollY(currentScrollY);
     };
 
