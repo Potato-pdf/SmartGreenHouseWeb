@@ -6,6 +6,7 @@ const Container = styled.div`
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   gap: 4rem;
   padding: 4rem 2rem;
+  padding-top: 0;
   max-width: 1400px;
   margin: 0 auto;
 `;

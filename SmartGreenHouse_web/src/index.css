@@ -11,6 +11,12 @@
   --background: #F0FFF0;  /* Fondo pastel blanco */
 }
 
+h2 {
+    text-align: center;
+    color: #4CAF50;
+}
+
+
 body {
   background-color: var(--background);
   color: var(--text);

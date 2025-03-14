@@ -10,6 +10,7 @@ const DetailContainer = styled.div`
   padding: 2rem;
   background: white;  // Solid white background
   border-radius: 20px;
+  padding-top: 0;
 `;
 
 const GreenhouseItem = styled.article`

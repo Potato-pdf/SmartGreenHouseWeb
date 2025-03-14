@@ -21,7 +21,6 @@ const AppWrapper = styled.div`
 `;
 
 const Section = styled.section`
-  padding: 150px 2rem 4rem;
   min-height: 100vh;
   background: transparent;
 `;

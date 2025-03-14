@@ -5,7 +5,7 @@ import AnimatedGreenhouseCards from "../components/AnimatedGreenhouseCards";
 const HomeContainer = styled.div`
   padding-top: 2rem;
   width: 100%;
-  min-height: 100vh;
+  min-height: 100%;
   background: transparent;
 `;
 
